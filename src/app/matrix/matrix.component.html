@@ -1,0 +1,29 @@
+<h1>Developer Skills Matrix</h1>
+<p *ngIf="!loaded">Loading matrix...</p>
+<div *ngIf="loaded">
+  <table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>SubCategory</th>
+            <th>Beginner</th>
+            <th>Advanced Beginner</th>
+            <th>Intermediate</th>
+            <th>Advanced</th>
+            <th>Expert</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td>{{item.category}}</td>
+            <td>{{item.subcategory}}</td>
+            <td>{{item.Beginner}}</td>
+            <td>{{item["Advanced Beginner"]}}</td>
+            <td>{{item.Intermediate}}</td>
+            <td>{{item.Advanced}}</td>
+            <td>{{item.Expert}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<a class="button" routerLink="">Back Home</a>
