@@ -1,0 +1,62 @@
+<h1>Developer Skills Matrix</h1>
+<p>
+  Assess your skills below! Select the button for each category which best
+  describes your current situation and ability.
+</p>
+<p *ngIf="!loaded">Loading...</p>
+<div *ngIf="loaded && data && !complete">
+  <p class="category">{{ data[currentQuestion].category }}</p>
+  <p class="subcategory">{{ data[currentQuestion].subcategory }}</p>
+  <div class="grid">
+    <p>
+      {{ data[currentQuestion].Beginner }}
+      <button class="button grid-button" (click)="answer('Beginner')">
+        Beginner
+      </button>
+    </p>
+    <p>
+      {{ data[currentQuestion]["Advanced Beginner"] }}
+      <button class="button grid-button" (click)="answer('Advanced Beginner')">
+        Advanced Beginner
+      </button>
+    </p>
+    <p>
+      {{ data[currentQuestion].Intermediate }}
+      <button class="button grid-button" (click)="answer('Intermediate')">
+        Intermediate
+      </button>
+    </p>
+    <p>
+      {{ data[currentQuestion].Advanced }}
+      <button class="button grid-button" (click)="answer('Advanced')">
+        Advanced
+      </button>
+    </p>
+    <p>
+      {{ data[currentQuestion].Expert }}
+      <button class="button grid-button" (click)="answer('Expert')">
+        Expert
+      </button>
+    </p>
+  </div>
+</div>
+<div *ngIf="complete">
+  <p class="category">Your Results</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>SubCategory</th>
+        <th>Your Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let answer of results">
+        <td>{{ answer.category }}</td>
+        <td>{{ answer.subcategory }}</td>
+        <td>{{ answer.response }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<a class="button" routerLink="">Back Home</a>
