@@ -94,6 +94,14 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://semalab.github.io/developer-skills-matrix/",
+            "name": "Naomi Carrigan",
+            "email": "ncharrigan@gmail.com"
+          }
         }
       }
     }
