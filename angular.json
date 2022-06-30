@@ -98,7 +98,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://semalab.github.io/developer-skills-matrix/",
+            "baseHref": "https://semalab.github.io/developer-skills-matrix-website/",
             "name": "Naomi Carrigan",
             "email": "ncharrigan@gmail.com"
           }
